@@ -4,11 +4,12 @@
     <script language="javascript" type="text/javascript">
     <!--
     function Add() {
+      max = 10;
       target = document.getElementById("number");
       now_str = target.innerHTML;
       now_int = parseInt(now_str);
-      add_int = now_int + 1;
-       target.innerHTML = add_int;
+      add_int = now_int +1;
+      if(add_int <= max) target.innerHTML = add_int;
     }
     function Sub() {
       target = document.getElementById("number");
