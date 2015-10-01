@@ -12,11 +12,12 @@
       if(add_int <= max) target.innerHTML = add_int;
     }
     function Sub() {
+      min = 0;
       target = document.getElementById("number");
       now_str = target.innerHTML;
       now_int = parseInt(now_str);
       sub_int = now_int - 1;
-       target.innerHTML = sub_int;
+      if (now_int > min) target.innerHTML = sub_int;
     }
     //-->
     </script>
