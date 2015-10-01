@@ -3,6 +3,7 @@
     <title>トレーニング用ページ</title>
     <script language="javascript" type="text/javascript">
     <!--
+    initial_value = 0;
     function Add() {
       max = 10;
       target = document.getElementById("number");
@@ -20,7 +21,8 @@
       if (now_int > min) target.innerHTML = sub_int;
     }
     function Reset() {
-      
+      target = document.getElementById("number");
+      target.innerHTML = initial_value;
     }
     //-->
     </script>
