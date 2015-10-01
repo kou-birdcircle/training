@@ -19,6 +19,9 @@
       sub_int = now_int - 1;
       if (now_int > min) target.innerHTML = sub_int;
     }
+    function Reset() {
+      
+    }
     //-->
     </script>
   </head>
@@ -26,5 +29,6 @@
     <div id="number">0</div>
     <input type="button" value="+" onclick="Add();"><br>
     <input type="button" value="-" onclick="Sub();"><br>
+    <input type="reset" value="reset" onclick="Reset();"><br>
   </body>
 </html>
