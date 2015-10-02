@@ -1,36 +1,37 @@
 <html>
   <head>
     <title>トレーニング用ページ</title>
+  </head>
+  <body>
     <script language="javascript" type="text/javascript">
     <!--
-    initial_value = 0;
-    function Add() {
-      max = 10;
+    var initial_value = 0;
+    var max = 10;
+    var min = 0;
+
+    function Calc(type){
       target = document.getElementById("number");
       now_str = target.innerHTML;
       now_int = parseInt(now_str);
-      add_int = now_int +1;
-      if(add_int <= max) target.innerHTML = add_int;
-    }
-    function Sub() {
-      min = 0;
-      target = document.getElementById("number");
-      now_str = target.innerHTML;
-      now_int = parseInt(now_str);
-      sub_int = now_int - 1;
-      if (now_int > min) target.innerHTML = sub_int;
-    }
-    function Reset() {
-      target = document.getElementById("number");
-      target.innerHTML = initial_value;
+      switch(type){
+        case "add":
+          add_int = now_int +1;
+          if(add_int <= max) target.innerHTML = add_int;
+          break;
+        case "sub":
+          sub_int = now_int - 1;
+          if (now_int > min) target.innerHTML = sub_int;
+          break;
+        case "reset":
+          target.innerHTML = initial_value;
+          break;
+      }
     }
     //-->
     </script>
-  </head>
-  <body>
     <div id="number">0</div>
-    <input type="button" value="+" onclick="Add();"><br>
-    <input type="button" value="-" onclick="Sub();"><br>
-    <input type="reset" value="reset" onclick="Reset();"><br>
+    <input type="button" value="+" onclick="Calc('add');"><br>
+    <input type="button" value="-" onclick="Calc('sub');"><br>
+    <input type="reset" value="reset" onclick="Calc('reset');"><br>
   </body>
 </html>
